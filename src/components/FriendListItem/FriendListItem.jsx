@@ -1,9 +1,14 @@
-const FriendListItem = (avatar, name, isOnline) => {
+const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <div>
-      <img src={avatar} alt={`${name}'s avatar`} width="48" />
-      <p>{name}</p>
-      <p>{isOnline ? 'Online' : 'Offline'}</p>
+    <div className="container-friend">
+      <img
+        className="img-friend"
+        src={avatar}
+        alt={`${name}'s avatar`}
+        width="48"
+      />
+      <p className="name-friend">{name}</p>
+      <p className="isonline-friend">{isOnline ? 'Online' : 'Offline'}</p>
     </div>
   );
 };
